@@ -1,0 +1,2 @@
+#Ignore all server side files that displays cookies
+*.php
