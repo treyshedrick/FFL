@@ -1,2 +1,4 @@
 #Ignore all server side files that displays cookies
 *.php
+#Ignore DS Store
+.DS_Store
