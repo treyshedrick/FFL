@@ -6,22 +6,25 @@ $('#matchupbtn').one('click',function(){
             dataType: "json",
             success: function(matchup)
             {
+                var myTeam;
+                var opponentTeam;
                 for(gloop=0; gloop< matchup.schedule.length; gloop++)
                 {
                     if(matchup.schedule[gloop].home.teamId == 1 || matchup.schedule[gloop].away.teamId == 1 && matchup.schedule[gloop].home.totalPointsLive != null)
                     {
                         if(matchup.schedule[gloop].home.teamId == 1)
                             {
-                                $('#mypoints').append(matchup.schedule[gloop].home.totalPointsLive);
-                                $('#opponentpoints').append(matchup.schedule[gloop].away.totalPointsLive);
+                                myTeam = matchup.schedule[gloop].home;
+                                opponentTeam = matchup.schedule[gloop].away;
                             }
                         else
                             {
-                                $('#mypoints').append(matchup.schedule[gloop].away.totalPointsLive);
-                                $('#opponentpoints').append(matchup.schedule[gloop].home.totalPointsLive);
+                                myTeam = matchup.schedule[gloop].away;
+                                opponentTeam = matchup.schedule[gloop].home;
                             }
-                        
-                         $('#matchup').show();
+                        $('#mypoints').append(myTeam.totalPointsLive);
+                        $('#opponentpoints').append(opponentTeam.totalPointsLive);
+                        $('#matchup').show();
                     }
                 }
             },
