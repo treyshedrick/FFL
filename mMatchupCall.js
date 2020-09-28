@@ -11,10 +11,11 @@ $('#matchupbtn').one('click',function(){
                 /* statsGroup Array description
                 4: TD Pass | 8: Every 25 Passing Yards | 25: Rush TD
                 28: Every 10 rushing yards | 43: TD reception | 48: Every 10 receiving yards
-                53: Reception | 72: Fumbles lost
+                53: Reception | 72: Fumbles lost | 10000: Bench Points
                 */
                 var statsGroup = ["4","8","25","28","43","48","53","72"];
                 var stats = [0,0,0,0,0,0,0,0];
+                var benchPoints = 0;
 
                 for(gloop=0; gloop< matchup.schedule.length; gloop++)
                 {
@@ -51,6 +52,11 @@ $('#matchupbtn').one('click',function(){
                                             }
                                         }
                                     }
+                                }
+                                //bench points
+                                else if(myTeam.rosterForCurrentScoringPeriod.entries[rosterNum].lineupSlotId == 20 && player.stats[x].appliedTotal % 1 == 0)
+                                {
+                                    benchPoints += player.stats[x].appliedTotal;
                                 }
                             }
                         }
