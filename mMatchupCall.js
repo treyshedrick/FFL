@@ -11,7 +11,7 @@ $('#matchupbtn').one('click',function(){
                 /* statsGroup Array description
                 4: TD Pass | 8: Every 25 Passing Yards | 25: Rush TD
                 28: Every 10 rushing yards | 43: TD reception | 48: Every 10 receiving yards
-                53: Reception | 72: Fumbles lost | 10000: Bench Points
+                53: Reception | 72: Fumbles lost
                 */
                 var statsGroup = ["4","8","25","28","43","48","53","72"];
                 var stats = [0,0,0,0,0,0,0,0];
@@ -62,6 +62,20 @@ $('#matchupbtn').one('click',function(){
                         }
                         //stats coming from my defense and kicker totalpoints - all indivdual stats combined
                         var pointsDefenseKicker = myTeam.totalPointsLive - stats.reduce((a,b) => a + b, 0);
+                        $('#passTD').append(stats[0]);
+                        $('#passYards').append(stats[1]);
+                        $('#rushTD').append(stats[2]);
+                        $('#rushYards').append(stats[3]);
+                        $('#receptionTD').append(stats[4]);
+                        $('#receptionYards').append(stats[5]);
+                        $('#reception').append(stats[6]);
+
+                        if(stats[7] < 0)
+                        {
+                            $('#fumbles').append("Fumbles Lost: " + stats[7]);
+                        }
+
+                        $('#defenseKicker').append(pointsDefenseKicker);
                         $('#matchup').show();
                     }
                 }
