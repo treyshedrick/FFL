@@ -76,6 +76,7 @@ $('#matchupbtn').one('click',function(){
                         }
 
                         $('#defenseKicker').append(pointsDefenseKicker);
+                        $('#bench').append(benchPoints);
                         $('#matchup').show();
                     }
                 }
