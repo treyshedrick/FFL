@@ -11,9 +11,9 @@ $('#matchupbtn').one('click',function(){
                 /* statsGroup Array description
                 4: TD Pass | 8: Every 25 Passing Yards | 25: Rush TD
                 28: Every 10 rushing yards | 43: TD reception | 48: Every 10 receiving yards
-                53: Reception | 72: Fumbles lost
+                53: Reception | 72: Fumbles lost | 20: Interceptions Thrown
                 */
-                var statsGroup = ["4","8","25","28","43","48","53","72"];
+                var statsGroup = ["4","8","25","28","43","48","53","72","20"];
                 var stats = [0,0,0,0,0,0,0,0];
                 var benchPoints = 0;
 
@@ -73,6 +73,10 @@ $('#matchupbtn').one('click',function(){
                         if(stats[7] < 0)
                         {
                             $('#fumbles').append("Fumbles Lost: " + stats[7]);
+                        }
+                        if(stats[8] < 0)
+                        {
+                            $('#int').append("Interceptions Thrown: " + stats[8]);
                         }
 
                         $('#defenseKicker').append(pointsDefenseKicker);
