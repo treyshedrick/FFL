@@ -14,7 +14,7 @@ $('#matchupbtn').one('click',function(){
                 53: Reception | 72: Fumbles lost | 20: Interceptions Thrown
                 */
                 var statsGroup = ["4","8","25","28","43","48","53","72","20"];
-                var stats = [0,0,0,0,0,0,0,0];
+                var stats = [0,0,0,0,0,0,0,0,0];
                 var benchPoints = 0;
 
                 for(gloop=0; gloop< matchup.schedule.length; gloop++)
