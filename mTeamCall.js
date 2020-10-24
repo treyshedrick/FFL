@@ -15,6 +15,7 @@ $(document).ready(function(){
                 
                 $('#teamName').append(teamName);
                 $('#playoffSeed').append(team.playoffSeed);
+                $('#waiver').append(team.waiverRank)
                 $('#prjRank').append(team.currentProjectedRank);
                 $('#overall').append(overallRecord.wins + "-" + overallRecord.losses + "-" + overallRecord.ties);
                 $('#home').append(homeRecord.wins + "-" + homeRecord.losses + "-" + homeRecord.ties);
@@ -27,6 +28,13 @@ $(document).ready(function(){
                 {
                     $('#winStreak').append(overallRecord.streakLength + " Game " + overallRecord.streakType.charAt(0) + " Streak");
                 }
+
+                var pointsDiff = overallRecord.pointsFor - overallRecord.pointsAgainst;
+                if(pointsDiff > 0)
+                {
+                    pointsDiff = "+" + pointsDiff;
+                }
+                $('#pointsDifferential').append(pointsDiff);
             },
             error: function(err)
             {
