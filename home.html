@@ -7,23 +7,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 </head>
-<body class="text-center">
-    <div id="teamName">Team Name: </div>
-    <div id="playoffSeed">Current Playoff Seed: </div>
-    <div id="prjRank">Projected Ranking: </div>
-    <div id="waiver">Waiver Position: </div>
-    <div class="record">
-        <div id="overall">Overall Record: </div>
-        <div id="winStreak"></div>
-        <div id="home">Home Record: </div>
-        <div id="away">Away Record: </div>
-        <div id="division">Division Record: </div>
-        <div id="pointsFor">Total Points For: </div>
-        <div id="pointsAgainst">Total Points Against: </div>
-        <div id="pointsDifferential">Points Differential: </div>
-    </div>
-    <button id="matchupbtn">View Current Matchup</button>
-    <div id="matchup" style="display: none;"> <!-- css temporary until logic is done-->
+<body>
+    <div class="container text-center">
+        <div id="teamName"></div>
+        <div class="row">
+            <div id="playoffSeed" class="col-sm">Current Playoff Seed: </div>
+            <div id="prjRank" class="col-sm">Projected Ranking: </div>
+            <div id="waiver" class="col-sm">Waiver Position: </div>
+        </div>
+        Record
+        <div class="record row">
+            <div id="overall" class="col-12">Overall Record: </div>
+            <div id="winStreak" class="col-12"></div>
+            <div id="home" class="col-4">Home Record: </div>
+            <div id="away" class="col-4">Away Record: </div>
+            <div id="division" class="col-4">Division Record: </div>
+            <div id="pointsFor" class="col-4">Total Points For: </div>
+            <div id="pointsAgainst" class="col-4">Total Points Against: </div>
+            <div id="pointsDifferential" class="col-4">Points Differential: </div>
+        </div>
+            <button id="matchupbtn">View Current Matchup</button>
+        <div id="matchup" style="display: none;"> <!-- css temporary until logic is done-->
             <div id="mypoints">My Team: </div>
             <div id="opponentpoints">Opponent: </div>
             <div id="Points"> Points From
@@ -39,6 +43,7 @@
                 <div id="defenseKicker">Defense and Kicker: </div>                
                 <div id="bench">Points Left on Bench: </div>              
             </div>
+        </div>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
