@@ -1,6 +1,6 @@
 .row
 {
-    padding: 2.5%;
+    padding: 12.5px;
     border-top: solid;
     border-width: 1px;
     border-radius: .25%;
@@ -9,7 +9,7 @@
 }
 .col-12
 {
-    padding: 1.5%;
+    padding: 7.5px;
 }
 #teamName
 {
