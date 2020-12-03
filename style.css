@@ -1,0 +1,17 @@
+.row
+{
+    padding: 2.5%;
+    border-top: solid;
+    border-width: 1px;
+    border-radius: .25%;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.col-12
+{
+    padding: 1.5%;
+}
+#teamName
+{
+    font-size: 30px;
+}
