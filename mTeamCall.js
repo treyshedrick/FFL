@@ -35,6 +35,7 @@ $(document).ready(function(){
                     pointsDiff = "+" + pointsDiff;
                 }
                 $('#pointsDifferential').append(pointsDiff);
+                $('body').show();
             },
             error: function(err)
             {
