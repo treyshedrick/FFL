@@ -91,7 +91,7 @@ $('#matchupbtn').one('click',function(){
             },
             error: function(err)
             {
-                alert("Error: " + err);
+                alert("Unable to load matchup\nError: " + err);
             }
         });
     });

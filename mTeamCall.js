@@ -39,7 +39,8 @@ $(document).ready(function(){
             },
             error: function(err)
             {
-                alert("Error: " + err);
+                alert("Unable to load page\nError: " + err);
+                console.log(err);
             }
         });
     });
